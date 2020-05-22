@@ -21,6 +21,7 @@ public class BaseConfig {
 		System.out.println(BaseConfig.getconfig("URL"));
 		System.out.println(BaseConfig.getconfig("Email"));
 		System.out.println(BaseConfig.getconfig("Password"));
+		System.out.println(BaseConfig.getconfig("Location"));
 
 	}
 

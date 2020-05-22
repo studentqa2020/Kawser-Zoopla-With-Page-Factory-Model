@@ -14,6 +14,8 @@ import com.util.TakeAppScreenShot;
 import com.util.Wait;
 
 public class BaseLoginTest {
+	
+	protected static WebDriver driver;
 
 	public static void getLogin() throws Throwable {
 
@@ -22,7 +24,7 @@ public class BaseLoginTest {
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
 		Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
 
-		WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.get(BaseConfig.getconfig("URL"));
@@ -58,7 +60,7 @@ public class BaseLoginTest {
 		System.out.println("Current Url After Login :" + driver.getCurrentUrl());
 		System.out.println("Page Title after LogIn :" + driver.getTitle());
 
-		driver.quit();
+		//driver.quit();
 
 	}
 
